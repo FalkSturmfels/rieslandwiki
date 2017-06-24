@@ -12,15 +12,14 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css/app.css')
-    .sass('resources/assets/sass/bootswatch/bootswatch.sass', "public/css");
+    .sass('resources/assets/sass/app.scss', 'public/css/app.css');
 
 
 mix.styles([
     'resources/assets/libs/bootstrap/css/bootstrap.css',
     'public/css/app.css',
     'resources/assets/libs/select2/css/select2.css',
-    'resources/assets/libs/font-awesome/css/font-awesome.css'
+    'resources/assets/libs/font-awesome/css/font-awesome.min.css'
 ], 'public/css/final.css');
 
 mix.scripts([

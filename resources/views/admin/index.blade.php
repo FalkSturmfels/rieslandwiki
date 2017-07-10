@@ -8,12 +8,9 @@
     <div class="verticalSpacer"></div>
 
     <div class="row">
-        <div class="col-sm-offset-2">
-
-        </div>
         <div class="col-sm-2">
             <li class="list-group-item">
-                <a href=""    >
+                <a href="{{action('PageTypesController@index')}}">
                     Seitenarten
                 </a>
             </li>

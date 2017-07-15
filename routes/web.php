@@ -30,3 +30,9 @@ Route::get('/admin', function()
 });
 
 Route::get('/admin/pagetypes', "PageTypesController@index");
+
+Route::get('/admin/pagetypes/create', "PageTypesController@create");
+Route::post('/admin/pagetypes/create', 'PageTypesController@store');
+
+Route::get('/admin/pagetypes/{pageType}/edit', 'PageTypesController@edit');
+Route::patch('/admin/pagetypes/{pageType}', 'PageTypesController@update');

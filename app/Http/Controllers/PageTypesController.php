@@ -2,80 +2,87 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PageTypeRequest;
+use App\PageType;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class PageTypesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
-        return view('admin.pagetypes.index');
+        $pageTypes = PageType::all();
+        return view('admin.pagetypes.index', compact('pageTypes'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        return view('admin.pagetypes.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param PageTypeRequest $request
+     * @return Response
      */
-    public function store(Request $request)
+    public function store(PageTypeRequest $request)
     {
-        //
+        PageType::create($request->all());
+
+        return redirect()->action('PageTypesController@index');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  PageType  $pageType
+     * @return Response
      */
-    public function edit($id)
+    public function edit(PageType $pageType)
     {
-        //
+        return view('admin.pagetypes.edit', compact('pageType'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  PageTypeRequest  $request
+     * @param  PageType  $pageType
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(PageTypeRequest $request, PageType $pageType)
     {
-        //
+        $pageType->update($request->all());
+        return redirect()->action('PageTypesController@index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {

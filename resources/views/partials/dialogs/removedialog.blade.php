@@ -33,7 +33,7 @@
         var button = $(event.relatedTarget)
         var entity = button.data('entity')
         var modal = $(this)
-        modal.find('p').text("Wollen sie wirklich '" + entity.name + "' entfernen ?")
+        modal.find('p').text("Wollen sie wirklich {{$entityType}} '" + entity["{{$entityProperty}}"] + "' entfernen ?")
         modal.find('#removeForm').attr('action', '{{$entityUrl}}' + entity.id)
     });
 </script>

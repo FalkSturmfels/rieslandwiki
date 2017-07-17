@@ -44,17 +44,6 @@ class PageTypesController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  PageType  $pageType
@@ -81,11 +70,13 @@ class PageTypesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  PageType  $pageType
      * @return Response
      */
-    public function destroy($id)
+    public function destroy(PageType $pageType)
     {
-        //
+        /*$this->authorize('destroy', $pageType);*/
+        $pageType->delete();
+        return back();
     }
 }

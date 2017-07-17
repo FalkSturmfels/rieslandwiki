@@ -31,12 +31,16 @@
                             <td>{{$pageType->type}}</td>
                             <td>
                                 <h4>
-                                    <a href={{action('PageTypesController@edit', $pageType->id)}}><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href={{action('PageTypesController@edit', $pageType->id)}}><i
+                                                class="fa fa-pencil" aria-hidden="true"></i></a>
                                 </h4>
                             </td>
                             <td>
                                 <h4>
-                                    <a href={{url('/')}}><i class="fa fa-times" aria-hidden="true"></i></a>
+                                    <a data-toggle="modal" href="#removeDialog"
+                                       data-backdrop="static" data-entity="{{$pageType}}">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
                                 </h4>
                             </td>
                         </tr>
@@ -46,4 +50,10 @@
             </div>
         </div>
     </div>
+
+    @include('partials.dialogs.removedialog',
+    ['entityUrl' => '/admin/pagetypes/',
+     'entityType' => 'die Seitenart',
+     'entityProperty' => 'displayName',
+     ])
 @endsection

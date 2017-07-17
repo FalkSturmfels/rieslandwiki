@@ -36,3 +36,4 @@ Route::post('/admin/pagetypes/create', 'PageTypesController@store');
 
 Route::get('/admin/pagetypes/{pageType}/edit', 'PageTypesController@edit');
 Route::patch('/admin/pagetypes/{pageType}', 'PageTypesController@update');
+Route::delete('/admin/pagetypes/{pageType}', 'PageTypesController@destroy');

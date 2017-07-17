@@ -1,0 +1,1 @@
+value="@if(old($type)){{old($type)}}@elseif($entity){{$entity[$type]}}@endif"

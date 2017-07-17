@@ -2,7 +2,8 @@
     <label for="name" class="col-sm-1 control-label">Anzeigename* </label>
     <div class="col-sm-10">
         <input type="text" class="form-control" id="displayName" name="displayName"
-               placeholder="Anzeigename" @if($entity) value="{{$entity->displayName}}"@endif/>
+               placeholder="Anzeigename"
+                @include('partials.forminputs.oldorentityvalue', ["type" => "displayName"])>
     </div>
 </div>
 
@@ -10,7 +11,8 @@
     <label for="name" class="col-sm-1 control-label">Typ* </label>
     <div class="col-sm-10">
         <input type="text" class="form-control" id="type" name="type"
-               placeholder="Typ" @if($entity) value="{{$entity->type}}"@endif/>
+               placeholder="Typ"
+                @include('partials.forminputs.oldorentityvalue', ["type" => "type"])>
     </div>
 </div>
 

@@ -45,3 +45,5 @@ Route::delete('/admin/pagetypes/{pageType}', 'PageTypeController@destroy');
 // ============================================
 
 Route::get('/management/pages', "PageController@index");
+
+Route::get('/management/pages/create', "PageController@create");

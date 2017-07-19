@@ -14,7 +14,6 @@ class CreateNormalPagesTable extends Migration
     {
         Schema::create('normal_pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->text('body');
             $table->timestamps();
         });

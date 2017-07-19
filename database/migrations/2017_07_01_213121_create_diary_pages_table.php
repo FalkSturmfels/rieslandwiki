@@ -14,7 +14,6 @@ class CreateDiaryPagesTable extends Migration
     {
         Schema::create('diary_pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->text('body');
             $table->unsignedInteger('menu_link_list_id');
             $table->timestamps();

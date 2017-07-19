@@ -15,4 +15,9 @@ class MainController extends Controller
     {
         return view('admin.index');
     }
+
+    public function management()
+    {
+        return view('management.index');
+    }
 }

@@ -24,7 +24,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href={{url('/pages')}}>Seitenverwaltung</a>
+                    <a href={{url('/management')}}>Seitenverwaltung</a>
                 </li>
                 <li class={{ Request::segment(1) === 'admin' ? 'active' : null }}>
                     <a href={{url('/admin')}}>Admin</a>

@@ -20,6 +20,7 @@
 
 Route::get('/', "MainController@home");
 Route::get('/admin', "MainController@admin");
+Route::get('/management', "MainController@management");
 
 // ============================================
 //
@@ -43,4 +44,4 @@ Route::delete('/admin/pagetypes/{pageType}', 'PageTypeController@destroy');
 //
 // ============================================
 
-Route::get('/pages', "PageController@index");
+Route::get('/management/pages', "PageController@index");

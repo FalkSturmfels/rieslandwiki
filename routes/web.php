@@ -11,23 +11,21 @@
 |
 */
 
-// Home
-Route::get('/', function ()
-{
-    return view('home');
-});
+// ============================================
+//
+//   Main Navigation
+//
+// ============================================
 
+
+Route::get('/', "MainController@home");
+Route::get('/admin', "MainController@admin");
 
 // ============================================
 //
 //   Admin Area
 //
 // ============================================
-
-Route::get('/admin', function()
-{
-    return view('admin.index');
-});
 
 Route::get('/admin/pagetypes', "PageTypesController@index");
 

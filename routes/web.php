@@ -27,11 +27,20 @@ Route::get('/admin', "MainController@admin");
 //
 // ============================================
 
-Route::get('/admin/pagetypes', "PageTypesController@index");
+Route::get('/admin/pagetypes', "PageTypeController@index");
 
-Route::get('/admin/pagetypes/create', "PageTypesController@create");
-Route::post('/admin/pagetypes/create', 'PageTypesController@store');
+Route::get('/admin/pagetypes/create', "PageTypeController@create");
+Route::post('/admin/pagetypes/create', 'PageTypeController@store');
 
-Route::get('/admin/pagetypes/{pageType}/edit', 'PageTypesController@edit');
-Route::patch('/admin/pagetypes/{pageType}', 'PageTypesController@update');
-Route::delete('/admin/pagetypes/{pageType}', 'PageTypesController@destroy');
+Route::get('/admin/pagetypes/{pageType}/edit', 'PageTypeController@edit');
+Route::patch('/admin/pagetypes/{pageType}', 'PageTypeController@update');
+Route::delete('/admin/pagetypes/{pageType}', 'PageTypeController@destroy');
+
+
+// ============================================
+//
+//   Page Management Area
+//
+// ============================================
+
+Route::get('/pages', "PageController@index");

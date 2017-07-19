@@ -15,15 +15,18 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class={{ Request::segment(1) === 'worlds' ? 'active' : null }}>
+                <li>
                     <a href={{url('/')}}>Übersicht</a>
+                </li>
+                <li>
+                    <a href={{url('/')}}>Glossar</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href={{url('/')}}>Glossar</a>
+                    <a href={{url('/pages')}}>Seitenverwaltung</a>
                 </li>
-                <li>
+                <li class={{ Request::segment(1) === 'admin' ? 'active' : null }}>
                     <a href={{url('/admin')}}>Admin</a>
                 </li>
                 {{--@can('user-index')

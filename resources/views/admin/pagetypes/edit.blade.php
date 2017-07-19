@@ -9,7 +9,7 @@
 
     @include('partials.global.erros')
 
-    <form class="form-horizontal" method="post" action="{{action('PageTypesController@update', $pageType->id)}}">
+    <form class="form-horizontal" method="post" action="{{action('PageTypeController@update', $pageType->id)}}">
         {{method_field('PATCH')}}
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

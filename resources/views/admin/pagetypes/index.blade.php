@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-sm-1">
-            <h4><a href={{action('PageTypesController@create')}}><i class="fa fa-plus" aria-hidden="true"></i> Neu</a>
+            <h4><a href={{action('PageTypeController@create')}}><i class="fa fa-plus" aria-hidden="true"></i> Neu</a>
             </h4>
         </div>
         <div class="col-sm-4">
@@ -31,7 +31,7 @@
                             <td>{{$pageType->type}}</td>
                             <td>
                                 <h4>
-                                    <a href={{action('PageTypesController@edit', $pageType->id)}}><i
+                                    <a href={{action('PageTypeController@edit', $pageType->id)}}><i
                                                 class="fa fa-pencil" aria-hidden="true"></i></a>
                                 </h4>
                             </td>

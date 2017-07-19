@@ -7,7 +7,7 @@ use App\PageType;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class PageTypesController extends Controller
+class PageTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -40,7 +40,7 @@ class PageTypesController extends Controller
     {
         PageType::create($request->all());
 
-        return redirect()->action('PageTypesController@index');
+        return redirect()->action('PageTypeController@index');
     }
 
     /**
@@ -64,7 +64,7 @@ class PageTypesController extends Controller
     public function update(PageTypeRequest $request, PageType $pageType)
     {
         $pageType->update($request->all());
-        return redirect()->action('PageTypesController@index');
+        return redirect()->action('PageTypeController@index');
     }
 
     /**

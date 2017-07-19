@@ -11,8 +11,27 @@
 |
 */
 
-// Home
-Route::get('/', function ()
-{
-    return view('home');
-});
+// ============================================
+//
+//   Main Navigation
+//
+// ============================================
+
+
+Route::get('/', "MainController@home");
+Route::get('/admin', "MainController@admin");
+
+// ============================================
+//
+//   Admin Area
+//
+// ============================================
+
+Route::get('/admin/pagetypes', "PageTypesController@index");
+
+Route::get('/admin/pagetypes/create', "PageTypesController@create");
+Route::post('/admin/pagetypes/create', 'PageTypesController@store');
+
+Route::get('/admin/pagetypes/{pageType}/edit', 'PageTypesController@edit');
+Route::patch('/admin/pagetypes/{pageType}', 'PageTypesController@update');
+Route::delete('/admin/pagetypes/{pageType}', 'PageTypesController@destroy');

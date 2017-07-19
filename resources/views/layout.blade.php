@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Referencing mixed final css -->
-    <link media="all" type="text/css" rel="stylesheet" href="css/final.css">
+    <link media="all" type="text/css" rel="stylesheet" href="/css/final.css">
 
     <!-- Referencing mixed final js -->
-    <script src="js/final.js"></script>
+    <script src="/js/final.js"></script>
 
     <title>Riesland</title>
 </head>

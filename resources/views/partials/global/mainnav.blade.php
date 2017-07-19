@@ -23,6 +23,9 @@
                 <li>
                     <a href={{url('/')}}>Glossar</a>
                 </li>
+                <li>
+                    <a href={{url('/admin')}}>Admin</a>
+                </li>
                 {{--@can('user-index')
                 <li class={{ Request::segment(1) === 'users' ? 'active' : null }}>
                     <a href={{url('/')}}>User</a>

@@ -18,6 +18,6 @@
 
 <div class="form-group">
     <div class="col-sm-offset-1 col-sm-10">
-        <button type="submit" class="btn btn-default">Speichern</button>
+        <button type="submit" class="btn btn-info">Speichern</button>
     </div>
 </div>

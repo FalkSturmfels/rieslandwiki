@@ -17,10 +17,10 @@
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
 
-                    <button type="submit" class="btn btn-default">
+                    <button type="submit" class="btn btn-info">
                         Entfernen
                     </button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Abbrechen</button>
                 </form>
 
             </div>

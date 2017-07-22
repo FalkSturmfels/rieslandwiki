@@ -23,7 +23,9 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        $values = collect(['Normale Seite', 'Tagebuch-Seite']);
+
+        return view('management.pages.create', compact('values'));
     }
 
     /**

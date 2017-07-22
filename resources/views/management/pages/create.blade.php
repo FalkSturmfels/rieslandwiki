@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1>Seitenarten - Anlegen</h1>
+        <h1>Seiten - Anlegen</h1>
     </div>
 
     <div class="verticalSpacer"></div>
@@ -12,7 +12,7 @@
     <form class="form-horizontal" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-        @include('admin.pagetypes.forminput', ["entity" => null])
+        @include('management.pages.pageinfoforminput', ["entity" => null, "values"=>$values])
 
     </form>
 

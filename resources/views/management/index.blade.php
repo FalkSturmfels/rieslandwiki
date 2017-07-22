@@ -11,7 +11,7 @@
         <div class="col-sm-2">
             <li class="list-group-item">
                 <a href="{{action('PageController@index')}}">
-                    Seiten anlegen
+                    Seiten
                 </a>
             </li>
         </div>

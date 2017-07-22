@@ -21,6 +21,7 @@
                         <th>Name</th>
                         <th>Überschrift</th>
                         <th>Unter-Überschrift</th>
+                        <th>Seitenart</th>
                         <th></th>
                     </tr>
                     </thead>
